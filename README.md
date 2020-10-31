@@ -10,4 +10,5 @@ BlackJack_PlayerVSComputer:
 
 BlackJack_ComputerVSCompter:
 
--en cours de développement
+IA 1 affronte IA 2
+-n'hésiter pas a modifier IA 1 et 2
