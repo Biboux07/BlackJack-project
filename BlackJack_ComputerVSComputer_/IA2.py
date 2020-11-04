@@ -22,20 +22,21 @@ def CPUchoice ():
         if Numfinal >= 20 :
             break
 
-        if Numfinal >=15 and Numfinal <=19 :
-            k = int(random.randrange(0,1))
-             
-
+        if Numfinal >=15 and Numfinal <= 19 :
+            k = int(random.randrange(0,2))
+                
         if k == 0 :
             Numcard = DefFunctions.Rcard()
             Numfinal += Numcard
 
             i += 1
 
-        if k == 1 :
+        if k == 1 or k == 2 :
              break
 
         
 
     CPUscore = Numfinal
     return CPUscore
+
+

@@ -21,11 +21,25 @@ def Verif(final):
         Dif = 21 - final
     return Dif
 
+def lowerfraction(n,d):
+
+    from math import gcd
+
+    pgdc = gcd(n,d)
+    n2= n//pgdc
+    d2= d//pgdc
+    
+    #store the results in a list
+
+    pgdcs = [n2, d2]
+
+    return pgdcs
 
 def results (a, b):
     
+    i = 0
 
-    #Cas normaux 2 numbres positifs (trouver le plus proche)
+    #Cas normaux 2 numbres < 21 (trouver le plus proche)
     if a > b :
         i = 1
 
@@ -43,10 +57,24 @@ def results (a, b):
     if a > 21 and b <= 21 :
         i = 2
         
+
     #Egalité
 
     if a == b :
         i = 0
+
+
+    #Cas normaux 2 numbres > 21 (trouver le plus proche de 21)
+    if a > 21 and b > 21 :
+
+        if a > b :
+            i = 2
+
+        if a < b :
+            i = 1
+
+        if a == b :
+            i = 0
         
     #Cas normaux (trouver le plus proche)
 
@@ -70,17 +98,10 @@ def results (a, b):
 
 
 
-#i = Rcard()
-#print(i)
 
-#k = Sum(10, 5)
-#print(k)
 
-#y = Verif(17)
-#print(0)
 
-#k = CPUchoice()
-#print(k)
 
-#print("YOU WIN!")
-#print("WINNER: Player 1")
+
+
+
